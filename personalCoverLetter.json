@@ -1,0 +1,27 @@
+{
+    "open_para": {
+        "software": "I am writing this letter to express my interest for the {position} position at {company_name}. With a bachelor degree in Electrical Engineering, a professional engineer certification, Lighthouse Lab Data Science bootcamp diploma and hands on experience with Python, Linux, Unittest and SQL. I am confident that I will be an asset to your organization",
+        "datascience": "I am writing this letter to express my interest for the {position} position at {company_name}. With a bachelor degree in Electrical Engineering, a professional engineer certification, Lighthouse Lab Data Science bootcamp diploma and hands on experience with Pandas, SQL, Docker, PyTorch, Scikit-Learn and more. I am confident that I will be an asset to your team",
+        "web": "I am writing this letter to express my interest for the {position} position at {company_name}. With a bachelor degree in Electrical Engineering, a professional engineer certification, Lighthouse Lab Data Science bootcamp diploma and hands on experience with Python, SQL, Django, HTML, CSS. I am confident that I will be an asset to your company"
+    },
+    "third_coop": "In my most recent worked as a software engineer intern for the Trace team of Google Cloud Platform at Google. I made a search bar with customizable search fields that helps with searching and boosted up the search traffic by 20 percent. Additionally, I developed an end-to-end feature to suggest the most common data for each user and used to autocomplete text search. This project enabled me to use various programming languages to write software that could scale at massive levels and software architecture and data processing pipelines. ",
+    "github": "",
+    "closing": "I would like to thank you very much for considering my application, and I would greatly look forward to an opportunity to interview for the position offered by {company_name}. I can be reached by phone at {phone} or by email at {email}. For more information about me, please visit: {website}.",
+    "website": "",
+    "email": "",
+    "second_coop": "In the summer of 2017, I worked as a software development engineer for Abebooks, an  Amazon Company for four months. I used Python to prototype the integration of a potential online payment service into the current systems to determine the feasibility for future business between the two companies. I tested the payment provider\u2019s API, participated in evaluating risks and security loopholes and negotiating for customized features. Besides, I developed ecommerce features using Groovy with Spring MVC, JUnit, AWS: S3, SQS and databases such as PostgreSQL and Oracle. ",
+    "name": "Henri Vandersleyen",
+    "projects": {
+        "computerVision": "For my data science bootcamp final project I created a grocery store flyer scraper to help my wife find and keep track of weekly deals as she is very thrifty. I trained two Convoluted Neural Network(CNN), one to identify merchandise box and another one to read the price numbers, using the You Only Look Once (YOLO) model and created a spider to find the data as no dataset existed. I labelled the data using labelImg, transformed the data using ImgAug and stored all the data in a mongo database.",
+        "dataStructureApp": "I was inspired by freeCodeCamp.org data structure lecture to model each and every type of data structure using Python and create a command Line software to interact with them. The app is available as a Docker container and available on my docker hub account. The project is still being worked on as implementing each data structure model takes time.",
+        "tutorialPaper": "Lighthouse Lab bootcamp course delivery was fast paced and I unfortunately wasn't able to master every single subject taught. After the bootcamp, I created a serie of tutorials and papers to teach myself, and my peers how to master subjects like Docker with comprehensive examples and code hosted on GitHub.",
+        "databases":"During the Lighthouse Labs course I demonstrated an affinity with databases (SQL and NOSQL) and was able to help many of my classmates with SQL questions. This led me to take an university online course: COMP 418: Database tuning to expand my knowledge on the subject.",
+        "django": "While most of my eperience is with data science, I am currently learning more about web and web devellopment by creating my own website using Django and a Postgres database."
+    },
+    "company_name": "",
+    "first_coop": "My other work experience includes a four month coop term in September 2016 as a full stack web developer for RealtyServer System Inc. This company build online softwares serving multiple listing services for real estate business. My duties included implementing new backend features and functionalities for various real estate websites. I learnt technology such as Java Servlet, Velocity template engine and Javascript, jQuery for frontend styling and RESTful API.",
+    "phone": "",
+    "position": "",
+    "address": "",
+    "mail": ""
+}
