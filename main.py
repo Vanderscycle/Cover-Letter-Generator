@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 from pathlib import Path
 ############## CONFIG
 # detail file goes here
-info = "sample.json"
+info = "personalCoverLetter.json"
 save_dir = "coverLetters/"
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -50,10 +50,11 @@ data["position"] = helper.askInput("Enter the position name: ")
 position=data["position"]
 
 open_para=data["open_para"]
-first_coop=data["first_coop"]
-second_coop=data["second_coop"]
-third_coop=data["third_coop"]
-activities=data["activities"]
+second_coop=data["otherExperience"]
+third_coop=data["recentExperience"]
+projects=data["projects"]
+technology=data["technology"]
+learningNewTech=data["learningNewTech"]
 closing=data["closing"]
 
 document = Document()
@@ -111,24 +112,30 @@ second_coop_obj.add_run(second_coop)
 second_coop_obj = helper.format_alignment(second_coop_obj)
 
 #First coop
-first_coop_obj = document.add_paragraph()
-first_coop_obj = helper.format_alignment(first_coop_obj)
-first_coop_obj.add_run(first_coop)
+# first_coop_obj = document.add_paragraph()
+# first_coop_obj = helper.format_alignment(first_coop_obj)
+# first_coop_obj.add_run(first_coop)
 
 ##############ACTIVITIES
-activities_obj = document.add_paragraph()
-activities_obj = helper.format_alignment(activities_obj)
-activities = helper.askForChoices(activities, "Choose extracurricular activities")
-activity_string = "Beside coop experience, {}. Additionally, {}. {}. Last but not least, {}."
-activiy_para = activity_string.format(*activities)
+projects_obj = document.add_paragraph()
+projects_obj = helper.format_alignment(projects_obj)
+projects = helper.askForChoices(projects, "Choose extracurricular activities")
+projects_string = "Beside my mechanical engineering experience here are two personal projects that I have worked on: {} Additionally, {}"
+projects_para = projects_string.format(*projects)
 
-activities_obj.add_run(activiy_para)
+projects_obj.add_run(projects_para)
+
+##############TECHNOLOGY 
+technology_obj= document.add_paragraph()
+technology_obj = helper.format_alignment(technology_obj)
+technology_choice = helper.askForChoices(technology, "Choose one of the technology stack")
+# technology_obj.add_run(learningNewTech)
+technology_obj.add_run(helper.format_fill_in_info(learningNewTech, technology_choice,singleObj=True))
 
 ##############FINAL PARAGRAPH
 final_obj = document.add_paragraph()
 final_obj = helper.format_alignment(final_obj)
 final_obj.add_run(helper.format_fill_in_info(closing, data))
-   
 
 ##############CLOSING
 closing_obj= document.add_paragraph()

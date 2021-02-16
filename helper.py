@@ -11,11 +11,15 @@ def format_alignment(para_obj, inches=0.5):
     para_obj.paragraph_format.first_line_indent = Inches(inches)
     return para_obj
 
-def format_fill_in_info(format_obj, data):
+def format_fill_in_info(format_obj, data, singleObj=False):
+
     replaceList = re.findall("\{.*?\}", format_obj)
-    for replace in replaceList:
-        replaceTo = replace.strip("{").strip("}")
-        format_obj = re.sub(replace, str(data[replaceTo]), format_obj)
+    if singleObj:
+        format_obj = re.sub(replaceList[0], str(data[0]), format_obj)
+    else:
+        for replace in replaceList:
+            replaceTo = replace.strip("{").strip("}")
+            format_obj = re.sub(replace, str(data[replaceTo]), format_obj)
     return format_obj
 
 
@@ -57,7 +61,7 @@ def askForChoices(choice_obj, promptString=None):
             count += 1
         rawInput = input()
         if rawInput == "a": # choose all
-            returnChoices = choices[:4] # hardcoded 4
+            returnChoices = choices[:2] # hardcoded 2
             break
         elif rawInput != "":
             indexes = [int(i) for i in rawInput.split(" ")]
