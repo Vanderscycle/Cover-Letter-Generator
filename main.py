@@ -13,14 +13,14 @@ from dotenv import load_dotenv
 from pathlib import Path
 ############## CONFIG
 # detail file goes here
-info = "personalCoverLetter.json"
+info = "/personalCoverLetter.json"
 save_dir = "coverLetters/"
 
 BASE_DIR = Path(__file__).resolve().parent
 savePath = os.path.join(BASE_DIR,save_dir)
 
 # loading the json file data
-data = json.load(open(info))
+data = json.load(open(str(Path(__file__).resolve().parent) + info))
 
 # loading all the private information
 load_dotenv()
