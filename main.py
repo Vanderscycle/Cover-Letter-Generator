@@ -120,7 +120,7 @@ second_coop_obj = helper.format_alignment(second_coop_obj)
 projects_obj = document.add_paragraph()
 projects_obj = helper.format_alignment(projects_obj)
 projects = helper.askForChoices(projects, "Choose extracurricular activities")
-projects_string = "Beside my mechanical engineering experience here are two personal projects that I have worked on: {} Additionally, {}"
+projects_string = "Besides my mechanical engineering experience here are two personal projects that I have worked on: {} Additionally, {}"
 projects_para = projects_string.format(*projects)
 
 projects_obj.add_run(projects_para)
@@ -170,5 +170,5 @@ data.update({
     'github':''
 }) 
 
-with open(info, 'w') as outfile:
-    json.dump(data, outfile, indent=4)
+# with open(info, 'w') as outfile:
+#     json.dump(data, outfile, indent=4)
