@@ -3,14 +3,14 @@ from docx.shared import Inches, Cm
 # from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.shared import Pt 
 import datetime
-import json, re, os
-from pprint import pprint
+import json, os
 # custom made python script
 import helper
 # dotenv to handle the .env file
 from dotenv import load_dotenv
 # pathlib to handle the 
 from pathlib import Path
+from subprocess import call
 ############## CONFIG
 # detail file goes here
 info = "/personalCoverLetter.json"
@@ -27,7 +27,7 @@ load_dotenv()
 name =os.getenv('NAME')
 address = os.getenv('ADDRESS')
 phone = os.getenv('PHONE')
-mail = os.getenv('MAIL')
+mail = "hvandersleyen@gmail.com"
 website = os.getenv('WEBSITE')
 github = os.getenv('GITHUB')
 
@@ -159,6 +159,9 @@ document.save(save_to_path)
 
 # os.system("abiword --to=pdf " + save_to_path) # Convert to pdf using abiword
 # os.system("rm -rf " + save_to_path) # Delete the doc file
+coverLetterFilePath = os.path.join(BASE_DIR)
+call(["lowriter --headless --convert-to pdf *.docx && rm *.docx"],cwd= coverLetterFilePath + '/coverLetters/',shell=True)
+
 
 # clearing all the info from the .env 
 data.update({
